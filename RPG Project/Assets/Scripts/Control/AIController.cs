@@ -1,24 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Combat;
+using RPG.Core;
 using UnityEngine;
 
 namespace RPG.Control
 {
     public class AIController : MonoBehaviour
     {
-        [SerializeField] float chasingDistance = 5f;
+        [SerializeField] float chasingDistance = 2f;
+        Fighter fighter;
+        Health health;
+        GameObject player;
+        void Start()
+        {
+            fighter =  GetComponent<Fighter>();
+            health = GetComponent<Health>();
+            player = GameObject.FindWithTag("Player");
+        }
         void Update()
         {
-            if (DistanceToPlayer() <= chasingDistance)
+            if (health.IsDead()) return;
+
+            if (InAttackRangeOfPlayer())
             {
-                print("PLAYER is being chased by " + gameObject.name);
+                fighter.Attack(player);
             }
         }
 
-        private float DistanceToPlayer()
+        private bool InAttackRangeOfPlayer()
         {
-            GameObject player = GameObject.FindWithTag("Player");
-            return Vector3.Distance(player.transform.position, transform.position);
+            float distanceToPlayer = Vector3.Distance(player.transform.position, transform.position);
+            return distanceToPlayer < chasingDistance;
         }
     }
 }
