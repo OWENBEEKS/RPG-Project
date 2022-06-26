@@ -270,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 4230188323707044303}
     - target: {fileID: 1929618579036270863, guid: e4f6ce64bf724da4e99d5d2190975731, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 2.044268
+      value: 2.048808
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4f6ce64bf724da4e99d5d2190975731, type: 3}
@@ -296,15 +296,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1599582132544524610, guid: 6d936c047c9f3d8458a98655425e184a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.811234
+      value: -45.956257
       objectReference: {fileID: 0}
     - target: {fileID: 1599582132544524610, guid: 6d936c047c9f3d8458a98655425e184a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 24.644428
+      value: 24.644426
       objectReference: {fileID: 0}
     - target: {fileID: 1599582132544524610, guid: 6d936c047c9f3d8458a98655425e184a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.405149
+      value: -9.728191
       objectReference: {fileID: 0}
     - target: {fileID: 1599582132544524610, guid: 6d936c047c9f3d8458a98655425e184a, type: 3}
       propertyPath: m_LocalRotation.w

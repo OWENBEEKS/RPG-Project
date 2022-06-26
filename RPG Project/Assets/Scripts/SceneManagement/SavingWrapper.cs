@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace RPG.SceneManagement
 {
-    public class SceneWrapper : MonoBehaviour
+    public class SavingWrapper : MonoBehaviour
     {
         const string defaultSaveFile = "save";
         void Update()
@@ -21,12 +21,12 @@ namespace RPG.SceneManagement
             }
         }
 
-        private void Save()
+        public void Save()
         {
             GetComponent<SavingSystem>().Save(defaultSaveFile);
         }
 
-        private void Load()
+        public void Load()
         {
             GetComponent<SavingSystem>().Load(defaultSaveFile);
         }

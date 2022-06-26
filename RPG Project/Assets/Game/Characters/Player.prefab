@@ -80,6 +80,10 @@ PrefabInstance:
       propertyPath: m_AngularSpeed
       value: 5000
       objectReference: {fileID: 0}
+    - target: {fileID: 5830064083183549596, guid: ff712e6e6f2c70a49bd907ad7f51a33d, type: 3}
+      propertyPath: uniqueIdentifier
+      value: player
+      objectReference: {fileID: 0}
     - target: {fileID: 7223390411711483767, guid: ff712e6e6f2c70a49bd907ad7f51a33d, type: 3}
       propertyPath: m_Name
       value: Player
