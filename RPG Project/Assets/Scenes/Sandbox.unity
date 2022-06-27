@@ -1376,7 +1376,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 492837457}
-  m_LocalRotation: {x: 0.36889735, y: -0.32345992, z: 0.13870615, w: 0.8602611}
+  m_LocalRotation: {x: 0.36889732, y: -0.32345986, z: 0.13870612, w: 0.8602611}
   m_LocalPosition: {x: 4.5, y: 4.86, z: 19.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1431,6 +1431,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3206146420461652959, guid: 0fef6de3519153d4ea83f9685ce80f86, type: 3}
+      propertyPath: defaultWeapon
+      value: 
+      objectReference: {fileID: 11400000, guid: a3bdf4d650fe17a409832f1bf3d68542, type: 2}
     - target: {fileID: 3451073799423210953, guid: 0fef6de3519153d4ea83f9685ce80f86, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.208256
@@ -3099,7 +3103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1393482604
 Transform:
   m_ObjectHideFlags: 0
