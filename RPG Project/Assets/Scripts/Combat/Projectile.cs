@@ -1,12 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using RPG.Core;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float projectileSpeed = 2f;
-    [SerializeField] Transform target = null;
+    Health target = null;
 
     void Update()
     {
@@ -15,6 +16,10 @@ public class Projectile : MonoBehaviour
         MoveToTarget();
     }
 
+    public void SetTarget(Health target)
+    {
+        this.target = target;
+    }
     private void FindTarget()
     {
         transform.LookAt(GetAimLocation());
@@ -25,9 +30,9 @@ public class Projectile : MonoBehaviour
         CapsuleCollider targetCapsule = target.GetComponent<CapsuleCollider>();
         if(targetCapsule == null)
         {
-            return target.position;
+            return target.transform.position;
         }
-        return target.position + Vector3.up * targetCapsule.height / 2;
+        return target.transform.position + Vector3.up * targetCapsule.height / 2;
     }
 
     private void MoveToTarget()
