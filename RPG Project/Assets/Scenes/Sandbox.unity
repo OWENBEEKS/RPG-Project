@@ -1442,6 +1442,10 @@ PrefabInstance:
       propertyPath: defaultWeapon
       value: 
       objectReference: {fileID: 11400000, guid: 6a8d839033c9f09439b1e5ec73ed6e47, type: 2}
+    - target: {fileID: 3206146420461652959, guid: 0fef6de3519153d4ea83f9685ce80f86, type: 3}
+      propertyPath: defaultWeaponName
+      value: Sword
+      objectReference: {fileID: 0}
     - target: {fileID: 3451073799423210953, guid: 0fef6de3519153d4ea83f9685ce80f86, type: 3}
       propertyPath: m_LocalPosition.x
       value: -42.208256
