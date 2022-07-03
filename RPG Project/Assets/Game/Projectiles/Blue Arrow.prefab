@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1436271399691699806, guid: 755263ef00aa1f341ac75c2a8af1649a, type: 3}
+      propertyPath: hitEffect
+      value: 
+      objectReference: {fileID: 3280238902030542310, guid: 216e7faa41e390d44a531c020373841b, type: 3}
+    - target: {fileID: 1436271399691699806, guid: 755263ef00aa1f341ac75c2a8af1649a, type: 3}
       propertyPath: projectileSpeed
       value: 20
       objectReference: {fileID: 0}
