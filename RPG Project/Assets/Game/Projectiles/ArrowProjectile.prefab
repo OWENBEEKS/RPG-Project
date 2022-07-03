@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 20
+  isHomingProjectile: 0
 --- !u!65 &8300760682365047932
 BoxCollider:
   m_ObjectHideFlags: 0

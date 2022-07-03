@@ -7,13 +7,21 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float projectileSpeed = 2f;
+    [SerializeField] bool isHomingProjectile = false;
     Health target = null;
     float damage = 0;
-
+    
+    private void Start()
+    {
+        FindTarget();
+    }
     void Update()
     {
         if(target == null) return;
-        FindTarget();
+        if (isHomingProjectile && !target.IsDead())
+        {
+            FindTarget();
+        }
         MoveToTarget();
     }
 
@@ -48,6 +56,7 @@ public class Projectile : MonoBehaviour
         {
             return;
         }
+        if(target.IsDead()) return;
         target.TakeDamage(damage);
         Destroy(gameObject);  
     }
