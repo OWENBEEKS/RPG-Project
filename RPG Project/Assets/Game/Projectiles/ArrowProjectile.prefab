@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1511565026559000434}
   - component: {fileID: 1436271399691699806}
+  - component: {fileID: 8300760682365047932}
   m_Layer: 0
   m_Name: ArrowProjectile
   m_TagString: Untagged
@@ -45,7 +46,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78e418ecee05a01428c8520b4e221658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSpeed: 4
+  projectileSpeed: 10
+--- !u!65 &8300760682365047932
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7320861219777161414}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14282666, y: 0.2753648, z: 1}
+  m_Center: {x: 0.010346971, y: -0.02651088, z: 0.36}
 --- !u!1001 &4237075719679816084
 PrefabInstance:
   m_ObjectHideFlags: 0
