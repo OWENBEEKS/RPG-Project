@@ -20,7 +20,13 @@ MonoBehaviour:
       - 150
     - stat: 1
       levels:
+      - 150
+    - stat: 2
+      levels:
       - 10
+      - 40
+      - 70
+      - 90
   - characterClass: 1
     stats:
     - stat: 0
