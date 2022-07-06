@@ -15,10 +15,10 @@ MonoBehaviour:
   characterClasses:
   - characterClass: 0
     health:
-    - 25
+    - 100
   - characterClass: 1
     health:
-    - 25
+    - 35
   - characterClass: 3
     health:
     - 25
