@@ -14,7 +14,7 @@ namespace RPG.Stats
 
         private void Start()
         {
-            currentLevel = GetLevel();
+            currentLevel = CalculateLevel();
             Experience experience = GetComponent<Experience>();
             if(experience != null)
             {
@@ -24,7 +24,7 @@ namespace RPG.Stats
 
         private void UpdateLevel()
         {
-            int newLevel = GetLevel();
+            int newLevel = CalculateLevel();
             if(newLevel > currentLevel)
             {
                 currentLevel = newLevel;
@@ -49,6 +49,7 @@ namespace RPG.Stats
         {
             Experience experience = GetComponent<Experience>();
             if(experience == null) return startingLevel;
+            
             float currentXP = experience.GetPoints();
             int penultimateLevel = progression.GetLevels(Stat.ExperienceToLevelUp, characterClass);
             for (int level = 1; level < penultimateLevel; level++)

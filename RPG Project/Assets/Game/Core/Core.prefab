@@ -199,6 +199,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1883217413967813511, guid: 1d1e5a1c459b7f543a60e964ad4a6b4d, type: 3}
+      propertyPath: experiencePoints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2162563716585801013, guid: 1d1e5a1c459b7f543a60e964ad4a6b4d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -297,15 +301,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1599582132544524610, guid: 6d936c047c9f3d8458a98655425e184a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.208252
+      value: -33.998627
       objectReference: {fileID: 0}
     - target: {fileID: 1599582132544524610, guid: 6d936c047c9f3d8458a98655425e184a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.711355
+      value: 7.061521
       objectReference: {fileID: 0}
     - target: {fileID: 1599582132544524610, guid: 6d936c047c9f3d8458a98655425e184a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.84819
+      value: -3.826454
       objectReference: {fileID: 0}
     - target: {fileID: 1599582132544524610, guid: 6d936c047c9f3d8458a98655425e184a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -437,7 +441,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4073629321775155841, guid: 0929bc82ab3a4704597634d1bae2f952, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0929bc82ab3a4704597634d1bae2f952, type: 3}
 --- !u!224 &6131783242327419326 stripped
 RectTransform:
