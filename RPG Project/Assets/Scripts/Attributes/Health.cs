@@ -14,23 +14,30 @@ namespace RPG.Attributes
 
         private void Start()
         {
-            BaseStats stats = GetComponent<BaseStats>();
-            stats.onLevelUp += RegenerateHealth;
             if(healthPoints < 0)
             {
                 healthPoints = GetComponent<BaseStats>().GetStat(Stat.Health);
             }
         }
 
+        private void OnEnable()
+        {
+            GetComponent<BaseStats>().onLevelUp += RegenerateHealth;
+        }
+        private void OnDisable()
+        {
+            GetComponent<BaseStats>().onLevelUp -= RegenerateHealth;
+        }
+
         public bool IsDead()
         {
             return isDead;
         }
-
         
         public void TakeDamage(GameObject instigator, float damage)
         {
             print(gameObject.name + " took damage: " + damage);
+
             healthPoints = Mathf.Max(healthPoints - damage, 0);
             if(healthPoints == 0)
             {
@@ -53,6 +60,7 @@ namespace RPG.Attributes
         {
             return 100 * (healthPoints / GetComponent<BaseStats>().GetStat(Stat.Health));
         }
+
         private void Die()
         {
             if(isDead) return;
@@ -66,6 +74,7 @@ namespace RPG.Attributes
         {
             Experience experience = instigator.GetComponent<Experience>();
             if(experience == null) return;
+
             experience.GainExperience(GetComponent<BaseStats>().GetStat(Stat.Health));
         }
 
@@ -81,12 +90,12 @@ namespace RPG.Attributes
         }
         public void RestoreState(object state)
         {
-            healthPoints = (float)state;
+            healthPoints = (float) state;
+
             if(healthPoints == 0)
             {
                 Die();
             }
         }
-
     }
 }

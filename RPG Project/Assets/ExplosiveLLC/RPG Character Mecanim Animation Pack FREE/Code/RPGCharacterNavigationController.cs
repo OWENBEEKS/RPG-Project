@@ -18,7 +18,7 @@ namespace RPGCharacterAnims
 		public float moveSpeed = 7.0f;
 		public float rotationSpeed = 1.0f;
 
-        void Awake()
+        private void Awake()
         {
             // In order for the navMeshAgent not to interfere with other movement, we want it to be
             // enabled ONLY when we are actually using it.
