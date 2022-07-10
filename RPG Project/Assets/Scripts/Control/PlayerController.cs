@@ -5,6 +5,7 @@ using RPG.Movement;
 using RPG.Combat;
 using UnityEngine;
 using RPG.Attributes;
+using UnityEngine.EventSystems;
 
 namespace RPG.Control
 {
@@ -16,7 +17,8 @@ namespace RPG.Control
         {
             None,
             Movement,
-            Combat
+            Combat,
+            UI
         }
         [System.Serializable]
         struct CursorMapping
@@ -34,9 +36,20 @@ namespace RPG.Control
         }
         private void Update()
         {
+            if(InteractWithUI()) return;
             if(InteractWithCombat()) return;
             if(InteractWithMovement()) return;
             SetCursor(CursorType.None);
+        }
+
+        private bool InteractWithUI()
+        {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                SetCursor(CursorType.UI);
+                return true;
+            }
+            return false;
         }
 
         private bool InteractWithCombat()
