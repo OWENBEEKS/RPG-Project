@@ -14,9 +14,8 @@ namespace RPG.Stats
         [SerializeField] Progression progression = null;
         [SerializeField] GameObject levelUpParticleEffect = null;
         [SerializeField] bool shouldUseModifiers = false;
-        LazyValue<int> currentLevel;
-        
         public event Action onLevelUp;
+        LazyValue<int> currentLevel;
         Experience experience;
 
         private void Awake()
