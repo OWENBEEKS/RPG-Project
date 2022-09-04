@@ -1,0 +1,1 @@
+You need to download the RPG Project_Data + RPG Project.exe to run the game.
